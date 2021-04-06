@@ -4,4 +4,14 @@
 
 <h1>Hello Foodies</h1>
 
+{% for d in data %}
+
+    <h3>{{d.food_title}}</h3>
+    <p> by {{d.food_author}}</p>
+    <p>{{d.ingredients}}</p>
+    <p>{{d.directions}}</p>
+    <p>posted on {{d.food_date}}</p>
+
+{% endfor %}
+
 {% endblock %}

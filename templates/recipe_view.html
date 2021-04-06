@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+    {% for recipe in recipes %}
+
+    <h3>{{recipe.food_title}}</h3>
+    <p>by {{recipe.food_author}}</p>
+    <p>{{recipe.ingredients}}</p>
+    <p>{{recipe.directions}}</p>
+    <p>Posted on {{recipe.food_date}}</p>
+
+    {% endfor %}
+
+{% endblock %}
