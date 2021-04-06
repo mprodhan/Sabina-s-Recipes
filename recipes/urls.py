@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from auth.urls import urlpatterns as auth_urls
-from blog.urls import urlpatterns as blog_urls
-from recipe_app.urls import urlpatterns as recipe_urls
-from recipe_profile import urlpatterns as profile_urls
+from authe.urls import urlpatterns as auth_urls
+from blogs.urls import urlpatterns as blog_urls
+from recipe_apps.urls import urlpatterns as recipe_urls
+from recipe_profiles.urls import urlpatterns as profile_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),

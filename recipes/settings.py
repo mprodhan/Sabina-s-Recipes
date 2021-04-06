@@ -40,11 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Installed modular apps
-    'auth.apps.AuthConfig',
-    'blog.apps.BlogConfig',
-    'recipe_app.apps.RecipeAppConfig',
-    'recipe_profile.apps.RecipeProfileConfig',
-    'recipe_user.apps.RecipeUserConfig'
+    # 'authe.apps.AuthConfig',
+    'blogs.apps.BlogConfig',
+    'recipe_apps.apps.RecipeAppConfig',
+    'recipe_profiles.apps.RecipeProfileConfig',
+    'recipe_users.apps.RecipeUserConfig'
 ]
 
 MIDDLEWARE = [
@@ -126,3 +126,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = 'recipe_users.RecipeUser'

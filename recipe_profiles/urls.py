@@ -1,5 +1,5 @@
 from django.urls import path
-from auth import views
+from recipe_profiles import views
 
 urlpatterns = [
     

@@ -1,5 +1,5 @@
 from django.urls import path
-from blog import views
+from recipe_apps import views
 
 urlpatterns = [
     
