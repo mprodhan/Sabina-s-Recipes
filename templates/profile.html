@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<p>Foodie: {{profilers.display_name}}</p>
+<p>Username: {{profilers.username}}</p>
+<p>Date Joined: {{profilers.date_joined}}</p>
+
+<h1>Recipe Links</h1>
+
+{% for profile in profiles %}
+
+<ul>
+    {{profile.food_title}}
+</ul>
+
+{% endfor %}
+
+<h1>Blog Links</h1>
+
+{% for blog in blogs %}
+
+<ul>
+    {{blog.blog_title}}
+</ul>
+
+{% endfor %}
+
+{% endblock %}

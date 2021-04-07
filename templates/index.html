@@ -4,4 +4,29 @@
 
 <h1>Hello Foodies</h1>
 
+<h1>Recipes</h1>
+
+{% for d in data %}
+
+    <h3>{{d.food_title}}</h3>
+    <p> by <a href="{% url 'recipe' request.user.username %}">
+        {{d.food_author}}</a>
+    </p>
+    <p>{{d.ingredients}}</p>
+    <p>{{d.directions}}</p>
+    <p>posted on {{d.food_date}}</p>
+
+{% endfor %}
+<hr>
+<h1>Blogs</h1>
+
+{% for blog in blogs %}
+
+    <h3>{{blog.blog_title}} by <a href="{% url 'blog' request.user.username %}">{{blog.blog_author}}</a></h3>
+    <p>{{blog.blog_body}}</p>
+    <p>Posted on {{blog.blog_date}}</p>
+
+
+{% endfor %}
+
 {% endblock %}
