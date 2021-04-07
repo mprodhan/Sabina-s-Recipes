@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Installed modular apps
-    # 'authe.apps.AuthConfig',
+    'authe.apps.AuthConfig',
     'blogs.apps.BlogConfig',
     'recipe_apps.apps.RecipeAppConfig',
     'recipe_profiles.apps.RecipeProfileConfig',

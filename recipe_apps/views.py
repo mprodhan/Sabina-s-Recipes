@@ -4,11 +4,13 @@ from django.shortcuts import render, reverse, HttpResponseRedirect, \
 from recipe_apps.models import Food
 from recipe_apps.forms import RecipeForm
 from recipe_users.models import RecipeUser
+from blogs.models import Blog
 
 def index(request):
     html="index.html"
     data = Food.objects.all()
-    context = {'data': data}
+    blogs = Blog.objects.all()
+    context = {'data': data, 'blogs': blogs}
     return render(request, html, context)
 
 def recipe(request):

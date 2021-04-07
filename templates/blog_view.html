@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<a href="/">home</a>
+
+{% for blog in blogs %}
+
+<ul>
+    <h3>{{blog.blog_title}} by {{blog.blog_author}}</h3>
+    <p>{{blog.blog_body}}</p>
+    <p>Posted on {{blog.blog_date}}</p>
+</ul>
+
+{% endfor %}
+
+{% endblock %}
