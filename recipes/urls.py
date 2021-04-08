@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.cong.urls.static import static
 
 from authe.urls import urlpatterns as auth_urls
 from blogs.urls import urlpatterns as blog_urls
@@ -29,3 +31,9 @@ urlpatterns += auth_urls
 urlpatterns += blog_urls
 urlpatterns += recipe_urls
 urlpatterns += profile_urls
+
+if settings.DEBUG:
+    urlpatterns += static(
+        settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT
+    )
