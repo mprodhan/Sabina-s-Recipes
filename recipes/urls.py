@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf import settings
-from django.cong.urls.static import static
+from django.conf.urls.static import static
 
 from authe.urls import urlpatterns as auth_urls
 from blogs.urls import urlpatterns as blog_urls
