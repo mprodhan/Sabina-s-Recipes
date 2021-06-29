@@ -14,6 +14,7 @@
     </p>
     <p>{{d.ingredients}}</p>
     <p>{{d.directions}}</p>
+    <img src="{{d.food_image.url}}" alt="food_image">
     <p>posted on {{d.food_date}}</p>
 
 {% endfor %}
@@ -24,6 +25,7 @@
 
     <h3>{{blog.blog_title}} by <a href="{% url 'blog' request.user.username %}">{{blog.blog_author}}</a></h3>
     <p>{{blog.blog_body}}</p>
+    <img src="{{blog.blog_image.url}}" alt="blog_pic">
     <p>Posted on {{blog.blog_date}}</p>
 
 

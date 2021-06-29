@@ -8,14 +8,14 @@ from recipe_users.models import RecipeUser
 def bloginsert(request):
     html = "blog.html"
     if request.method == "POST":
-        form = BlogForm(request.POST)
+        form = BlogForm(request.POST, request.FILES)
         if form.is_valid():
             data = form.cleaned_data
             Blog.objects.create(
                 blog_title=data['blog_title'],
                 blog_body=data['blog_body'],
-                blog_author=data['blog_author']
-                # blog_image=data['blog_image']
+                blog_author=data['blog_author'],
+                blog_image=data['blog_image']
             )
             return HttpResponseRedirect(reverse('homepage'))
     else:

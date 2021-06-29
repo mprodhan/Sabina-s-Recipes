@@ -16,15 +16,15 @@ def index(request):
 def recipe(request):
     html = "recipe.html"
     if request.method == "POST":
-        form = RecipeForm(request.POST)
+        form = RecipeForm(request.POST, request.FILES)
         if form.is_valid():
             data = form.cleaned_data
             Food.objects.create(
                 food_title=data['food_title'],
                 ingredients=data['ingredients'],
                 directions=data['directions'],
-                food_author=data['food_author']
-                # food_image=data['food_image']
+                food_author=data['food_author'],
+                food_image=data['food_image']
             )
             return HttpResponseRedirect(reverse('homepage'))
     else:

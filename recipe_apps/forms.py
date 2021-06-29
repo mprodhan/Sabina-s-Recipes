@@ -8,3 +8,4 @@ class RecipeForm(forms.Form):
     ingredients = forms.CharField(widget=forms.Textarea)
     directions = forms.CharField(widget=forms.Textarea)
     food_author = forms.ModelChoiceField(queryset=RecipeUser.objects.all())
+    food_image = forms.FileField()
